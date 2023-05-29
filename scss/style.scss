@@ -13,6 +13,24 @@
     font-style: normal;
     font-weight: 80;
 }
+@font-face { 
+    font-family: "CeraRoundPro";
+    src: url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Regular.eot");
+    src: url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Regular.woff") format("woff"),
+    url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Regular.otf") format("truetype");
+    font-style: normal;
+    font-weight: 80;
+}
+@font-face { 
+    font-family: "CeraRoundPro";
+    src: url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Medium.eot");
+    src: url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Medium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Medium.woff") format("woff"),
+    url("../fonts/CeraRoundPRO/TypeMates-CeraRoundPro-Medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: 100;
+}
 body {
     font-family: "Zero5Regular", sans-serif;
 }
@@ -91,6 +109,11 @@ h5 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: all .3s ease;
+}
+.main_btn:hover {
+    background: #FFFFFF;
+    color: #009EE7;
 }
 
 // header
@@ -116,8 +139,21 @@ h5 {
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1px 4px;
+    transition: all .3s ease;
     svg {
         margin-right: 15px;
+        path {
+            transition: all .3s ease;
+        }
+    }
+}
+.header__email:hover {
+    background: #FFFFFF;
+    color: #009EE7;
+    path {
+        fill: #009EE7;
     }
 }
 .header__phone {
@@ -130,8 +166,21 @@ h5 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1px 4px;
+    transition: all .3s ease;
     svg {
         margin-right: 15px;
+        path {
+            transition: all .3s ease;
+        }
+    }
+}
+.header__phone:hover {
+    background: #FFFFFF;
+    color: #009EE7;
+    path {
+        stroke: #009EE7;
     }
 }
 .header__call {
@@ -156,15 +205,23 @@ h5 {
         display: flex;
     }
     li {
-        margin-left: 40px;
+        margin-left: 32px;
     }
     a {
+        display: block;
         font-weight: 80;
         font-size: 15px;
         line-height: 19px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #FFFFFF;
+        padding: 3px 4px;
+        border-radius: 5px;
+        transition: all .3s ease;
+    }
+    a:hover {
+        background: #FFFFFF;
+        color: #009EE7;
     }
 }
 
@@ -261,6 +318,10 @@ h5 {
     }
     .slick-prev {
         transform: translateX(-80px);
+        background: #FFFFFF url(../img/arrow-left.svg) no-repeat center;
+    }
+    .slick-next {
+        background: #FFFFFF url(../img/arrow-right.svg) no-repeat center;
     }
     .slick-prev::before, .slick-next::before {
         display: none;
@@ -288,6 +349,59 @@ h5 {
     text-transform: uppercase;
     color: #FFFFFF;
     overflow: hidden;
+    h1 {
+        transform: translateY(40px);
+        transition: all .7s ease;
+        transition-delay: .5s;
+        opacity: 0;
+    }
+    h2 {
+        transform: translateY(40px);
+        transition: all .7s ease;
+        transition-delay: .5s;
+        opacity: 0;
+    }
+    p {
+        font-weight: 80;
+        font-family: 'CeraRoundPro', sans-serif;
+        transform: translateY(40px);
+        transition: all .7s ease;
+        transition-delay: 1s;
+        opacity: 0;
+    }
+    .banner__img {
+        transform: translateY(40px);
+        transition: all .7s ease;
+        transition-delay: 1.5s;
+        opacity: 0;
+    }
+    
+}
+.banner__block::before {
+    transform: rotate(180deg) scale(0.98);
+    transition: all .8s ease;
+}
+.banner__block.slick-slide.slick-current.slick-active {
+    h1 {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    h2 {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    p {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .banner__img {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.banner__block.slick-slide.slick-current.slick-active::before {
+    transform: rotate(0) scale(1);
+    transition-delay: .5s;
 }
 .banner__block::before {
     content: "";
@@ -320,6 +434,7 @@ h5 {
     }
 }
 .company__text {
+    font-family: "CeraRoundPro", sans-serif;
     max-width: 798px;
     width: 100%;
     margin: 0 auto;
@@ -330,7 +445,7 @@ h5 {
     color: #000000;
     margin-bottom: 67px;
     h6 {
-        font-weight: 80;
+        font-weight: 100;
         font-size: 20px;
         line-height: 160%;
         text-align: center;
@@ -432,6 +547,10 @@ h5 {
     .wrap {
         padding-left: 65px;
     }
+    ul {
+        font-weight: 80;
+        font-family: "CeraRoundPro", sans-serif;
+    }
     li {
         margin-bottom: 10px;
     }
@@ -471,6 +590,13 @@ h5 {
         position: relative;
         z-index: 2;
     }
+    p {
+        font-weight: 80;
+        font-family: "CeraRoundPro", sans-serif;
+        a {
+            color: #009EE7;
+        }
+    }
 }
 .production__img {
     padding-top: 51px;
@@ -505,6 +631,13 @@ h5 {
     .box {
         display: flex;
         flex-wrap: wrap;
+    }
+    p {
+        font-weight: 80;
+        font-family: "CeraRoundPro", sans-serif;
+        a {
+            color: #009EE7;
+        }
     }
 }
 .production__block:nth-child(2n) {
@@ -652,12 +785,32 @@ h5 {
     color: #FFFFFF;
     margin-left: auto;
     a {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         color: #FFFFFF;
         margin-bottom: 13px;
+        padding: 1px 4px;
+        border-radius: 5px;
+        transition: all .3s ease;
         svg {
             margin-right: 15px;
+            path {
+                transition: all .3s ease;
+            }
+        }
+    }
+    div:nth-child(1) a:hover {
+        background: #FFFFFF;
+        color: #009EE7;
+        path {
+            fill: #009EE7;
+        }
+    }
+    div:nth-child(2) a:hover {
+        background: #FFFFFF;
+        color: #009EE7;
+        path {
+            stroke: #009EE7;
         }
     }
 }
@@ -687,6 +840,9 @@ h5 {
     a {
         color: #FFFFFF;
     }
+    a:hover {
+        color: #c2ecff;
+    }
 }
 .footer__kontur {
     display: flex;
@@ -697,6 +853,9 @@ h5 {
         font-size: 14px;
         line-height: 150%;
         color: #FFFFFF;
+    }
+    a:hover {
+        text-decoration: underline;
     }
     img {
         margin-left: 15px;

@@ -78,7 +78,7 @@ h3 {
   color: #009EE7;
 }
 
-h4 {
+.banner h4, .products h4, .company h4, .locations h4 {
   font-weight: 80;
   font-size: 30px;
   line-height: 142%;
@@ -86,8 +86,21 @@ h4 {
   text-transform: uppercase;
 }
 
-h5 {
+.production h4 {
+  font-size: 30px;
+  line-height: 142%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.banner h5, .products h5, .production h5, .locations h5 {
   font-weight: 80;
+  font-size: 24px;
+  line-height: 147.5%;
+  letter-spacing: 0.03em;
+}
+
+.company h5 {
   font-size: 24px;
   line-height: 147.5%;
   letter-spacing: 0.03em;
@@ -268,9 +281,7 @@ h5 {
 }
 
 .main {
-  background: rgb(25, 170, 236);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(25, 170, 236)), color-stop(50%, rgb(84, 218, 252)), to(rgb(25, 170, 236)));
-  background: linear-gradient(180deg, rgb(25, 170, 236) 0%, rgb(84, 218, 252) 50%, rgb(25, 170, 236) 100%);
+  background: #19AAEC;
   position: relative;
   padding-top: 500px;
   margin-top: -80px;
@@ -689,28 +700,34 @@ h5 {
   z-index: 2;
 }
 
-.production__bg {
+.production__bg, .production__bg2, .production__bg3, .production__bg4 {
+  width: 1204px;
+  height: 709px;
+  border-radius: 50%;
   position: absolute;
+  background: #5CE2FF;
+  -webkit-filter: blur(266px);
+          filter: blur(266px);
+}
+
+.production__bg {
   top: 340px;
-  right: 50px;
+  right: 30px;
 }
 
 .production__bg2 {
-  position: absolute;
   top: 640px;
-  left: 50px;
+  left: 0;
 }
 
 .production__bg3 {
-  position: absolute;
   top: 940px;
-  right: 50px;
+  right: 0;
 }
 
 .production__bg4 {
-  position: absolute;
   top: 1240px;
-  left: 50px;
+  left: 0;
 }
 
 .production__top {
@@ -1117,8 +1134,25 @@ h5 {
 }
 
 @media screen and (max-width: 1024px) {
-  section {
-    display: none;
+  .production__bg, .production__bg2, .production__bg3, .production__bg4 {
+    width: 267px;
+    height: 669px;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .production__bg {
+    top: -200px;
+  }
+  .production__bg2 {
+    top: 100px;
+  }
+  .production__bg3 {
+    top: 400px;
+  }
+  .production__bg4 {
+    top: 700px;
   }
   .header {
     background: rgb(94, 191, 251);
@@ -1306,7 +1340,6 @@ h5 {
     line-height: 160%;
   }
   .banner {
-    display: block;
     min-height: 620px;
     background: rgb(89, 204, 253);
     background: -webkit-gradient(linear, right top, left top, color-stop(17%, rgb(89, 204, 253)), color-stop(60%, rgb(26, 171, 237)));
@@ -1397,9 +1430,6 @@ h5 {
   .banner__block .banner__img img {
     width: 100%;
   }
-  .company {
-    display: block;
-  }
   .company .container {
     padding-top: 52px;
   }
@@ -1445,8 +1475,8 @@ h5 {
     line-height: 147.5%;
   }
   h5 {
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 18px !important;
+    line-height: 130% !important;
   }
   .main {
     padding-top: 0;
@@ -1468,9 +1498,6 @@ h5 {
     position: absolute;
     left: -570px;
     bottom: 0;
-  }
-  .products {
-    display: block;
   }
   .main h3 {
     margin-bottom: 50px;
@@ -1542,17 +1569,14 @@ h5 {
     width: 50%;
   }
   h4 {
-    font-size: 20px;
-    line-height: 125%;
+    font-size: 20px !important;
+    line-height: 125% !important;
   }
   .products__content .wrap {
     padding: 0;
   }
   .products .container {
     padding-bottom: 160px;
-  }
-  .production {
-    display: block;
   }
   .production__block h4 {
     padding-left: 0;
@@ -1611,9 +1635,6 @@ h5 {
   }
   .production .container {
     padding-bottom: 83px;
-  }
-  .locations {
-    display: block;
   }
   .locations__box {
     -webkit-box-pack: center;

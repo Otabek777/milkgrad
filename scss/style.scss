@@ -134,10 +134,10 @@ h3 {
 // header
 .header {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
 }
 .header__top {
     background: rgb(94,199,251);
@@ -204,7 +204,7 @@ h3 {
 .header__call {
     margin-left: 30px;
 }
-.header__bootom {
+.header__bottom {
     padding: 24px 0;
 }
 .header__logo {
@@ -240,6 +240,22 @@ h3 {
     a:hover {
         background: #FFFFFF;
         color: #009EE7;
+    }
+}
+
+.header.fixed {
+    .header__top {
+        height: 0;
+        overflow: hidden;
+    }
+    .header__bottom {
+        width: 100%;
+        background: #19AAEC;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        border-bottom: 1px solid #FFFFFF;
     }
 }
 
@@ -1049,6 +1065,21 @@ h3 {
     display: none;
 }
 @media screen and (max-width: 1024px) {
+    .header.fixed {
+        .header__top {
+            padding: 0;
+        }
+        .header__bottom {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: transparent;
+            position: relative;
+        }
+        .header__call {
+            transition: all 0s ease;
+            bottom: 15px;
+        }
+    }
     .production__bg, .production__bg2, .production__bg3, .production__bg4 {
         width: 267px;
         height: 669px;
@@ -1129,6 +1160,7 @@ h3 {
         position: absolute;
         bottom: 20px;
         right: 20px;
+        z-index: 2;
     }
     .header__email {
         font-size: 12px;
@@ -1152,7 +1184,7 @@ h3 {
         padding: 16px 0 10px 0;
         background: transparent;
     }
-    .header__bootom {
+    .header__bottom {
         padding: 0 0 20px 0;
     }
     .header__logo {

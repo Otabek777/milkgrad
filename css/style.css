@@ -261,6 +261,7 @@ h3 {
 
 .header__navbar {
   margin-left: auto;
+  position: relative;
 }
 .header__navbar ul {
   display: -webkit-box;
@@ -273,8 +274,8 @@ h3 {
 .header__navbar a {
   display: block;
   font-weight: 80;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 19px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -286,6 +287,67 @@ h3 {
 .header__navbar a:hover {
   background: #FFFFFF;
   color: #009EE7;
+}
+.header__navbar .header__moreMenu {
+  display: none;
+}
+.header__navbar .header__moreMenu:hover {
+  display: block;
+}
+
+.moreMenu_open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  background: transparent;
+  border: 0;
+}
+.moreMenu_open span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  margin: 0 3px;
+}
+
+.header__moreMenu {
+  display: none;
+  width: 250px;
+  min-height: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 30px;
+  right: -14px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  padding: 16px;
+}
+.header__moreMenu li {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.header__moreMenu a {
+  width: auto;
+  display: inline-block;
+  color: #009EE7;
+}
+.header__moreMenu a:hover {
+  background: #009EE7;
+  color: #FFFFFF;
+}
+
+.moreMenu_open:hover + .header__moreMenu {
+  display: block;
 }
 
 .header.fixed .header__top {
@@ -366,6 +428,7 @@ h3 {
   background: rgb(25, 170, 236);
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgb(25, 170, 236)), to(rgb(90, 211, 253)));
   background: linear-gradient(90deg, rgb(25, 170, 236) 50%, rgb(90, 211, 253) 100%);
+  position: relative;
 }
 .banner .slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -1267,6 +1330,22 @@ h3 {
 }
 
 @media screen and (max-width: 1024px) {
+  .moreMenu_open {
+    display: none;
+  }
+  .header__moreMenu {
+    width: 100%;
+    height: auto !important;
+    min-height: auto;
+    display: block !important;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .header__moreMenu a:hover {
+    background: transparent;
+    color: #19AAEC;
+  }
   .header.fixed .header__top {
     padding: 0;
   }

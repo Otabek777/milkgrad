@@ -1137,6 +1137,8 @@ h3 {
     .header.fixed {
         .header__top {
             padding: 0;
+            position: relative;
+            z-index: 99999;
         }
         .header__bottom {
             padding-top: 16px;
@@ -1145,8 +1147,7 @@ h3 {
             position: relative;
         }
         .header__call {
-            transition: all 0s ease;
-            bottom: 15px;
+            top: 16px;
         }
     }
     .production__bg, .production__bg2, .production__bg3, .production__bg4 {
@@ -1226,10 +1227,11 @@ h3 {
         color: #19AAEC;
     }
     .header__call {
-        position: absolute;
-        bottom: 20px;
+        position: fixed;
+        top: 50px;
         right: 20px;
         z-index: 2;
+        transition: all 0s ease;
     }
     .header__email {
         font-size: 12px;

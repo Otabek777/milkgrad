@@ -331,7 +331,6 @@ h3 {
   border-radius: 20px;
   background: #FFFFFF;
   padding: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.07);
 }
 .header__moreMenu li {
   margin: 0;
@@ -1349,6 +1348,8 @@ h3 {
   }
   .header.fixed .header__top {
     padding: 0;
+    position: relative;
+    z-index: 99999;
   }
   .header.fixed .header__bottom {
     padding-top: 16px;
@@ -1357,9 +1358,7 @@ h3 {
     position: relative;
   }
   .header.fixed .header__call {
-    -webkit-transition: all 0s ease;
-    transition: all 0s ease;
-    bottom: 15px;
+    top: 16px;
   }
   .production__bg, .production__bg2, .production__bg3, .production__bg4 {
     width: 267px;
@@ -1454,10 +1453,12 @@ h3 {
     color: #19AAEC;
   }
   .header__call {
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    top: 50px;
     right: 20px;
     z-index: 2;
+    -webkit-transition: all 0s ease;
+    transition: all 0s ease;
   }
   .header__email {
     font-size: 12px;
